@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Variable</title>
+    <style>
+        :root{
+            --primary-color:purple;
+            --secondery-color:blue;
+            --font-size:12px;
+        }
+        h1{
+            color:var(--primary-color);
+
+        }
+        h5{
+            background-color: var(--primary-color);
+        }
+        .box{
+            border:2px solid var(--primary-color) ;
+            width:calc(100% - 300px);
+        }
+        .box p{
+            color:var(--primary-color);
+            font-size:var(--font-size);
+        }
+        .container{
+            display:grid;
+            gap:20px;
+            grid-template-columns:200px calc(100% - 200px - 20px);
+            grid-template-rows:500px;
+        }
+        .sidebar{
+            background-color:lightgray;
+        }
+        .content{
+            background-color:lightskyblue;
+        }
+    </style>
+</head>
+<body>
+    <h1>My Customs properties</h1>
+    <h5>Also common known as CSS variabale</h5>
+    <div class="box">
+        <h3>I'm doing something</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque unde enim saepe illo voluptates numquam qui fuga culpa vel ducimus.</p>
+    </div>
+    <div class="container">
+        <div class="sidebar">sidebar</div>
+        <div class="content">Main Contant</div>
+    </div>
+</body>
+</html>
